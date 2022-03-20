@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Public+Sans:wght@300&family=Ubuntu&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    color: aliceblue;
+    background-image: linear-gradient(120deg,#f6d365, #fda085);
+}
+
+.header {
+    font-family: 'Lobster', cursive;
+}
+
+button {
+    cursor: pointer;
+}
+
+#submit {
+    margin: 5px 15vh;
+    width:20%
+}
+
+#description {
+    padding: 10px;
+}
+
+.container {
+    width:100%;
+    height:100%;
+}
+
+.container .header {
+    width:100%;
+    height:100px;
+    text-align: center;
+    padding-top:20px ;
+}
+
+.content {
+    width: 100%;
+    margin-top: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    margin: 0% 40%;
+    width:300px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:20px 10px;
+    border-radius: 10px;
+    background-color: rgb(246, 201, 117);
+}
+
+.cardsContainer {
+    margin-left:1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+form input, form button {
+    width:100%;
+    height:50px;
+    font-family: inherit;
+    margin-bottom: 20px;
+    border:0;
+    border-radius: 5px;
+    font-size: large;
+    outline:none;
+}
+
+form button {
+    font-size: 2rem;
+    border: none;
+    background-color: rgb(216, 131, 20);
+    color:white
+}
+
+form button:hover {
+    background-color: white;
+    color: rgb(216, 131, 20);
+}
+
+.cardsContainer .cards {
+    width:300px;
+    height: 200px;
+    margin:10px 10px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(248, 0, 0, 0.376) 0px 5px 8px;
+    border-radius: 5px;
+    background-image: linear-gradient(180deg, #fda085), #f6d365;
+}
+
+.cards .buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonContainer button {
+    width:100px;
+    height:50px;
+    font-family: inherit;
+    font-size:22px;
+    border:none;
+    border-radius: 5px;
+    color:white;
+}
+
+.buttonContainer #delete {
+    background-color: rgb(216, 5, 5);
+}
+
+.buttonContainer #delete:hover {
+    background-color: #fff;
+    color: rgb(216, 5, 5);
+}
+
+.buttonContainer #edit {
+    background-color: rgb(165, 160, 160);
+}
+
+.buttonContainer #edit:hover {
+    background-color: #fff;
+    color: rgb(165, 160, 160);
+}
+
+.cards #date {
+    font-size: 10px;
+    color:grey;
+}
+
+#completed h1, #completed p {
+    text-decoration: line-through;
+}
+
+#check {
+    margin-left: 80%;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    border-radius: .35rem;
+    background-color: #fff;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+input[type="checkbox"]:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 20px;
+    color: #14d11d;
+    display: none;
+}
+
+input[type="checkbox"]:checked:after {
+    background-color: #fff;
+    display: block;
+}
+
+p {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color:black;
+}
+
+.fa-trash,
+.fa-edit {
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    form{
+        margin-bottom: 10px;
+    }    
+}
